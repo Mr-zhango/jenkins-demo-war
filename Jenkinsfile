@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('pull code') {
             steps {
-               checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '5f62fc97-9b15-43d1-b03e-9faf75905bbb', url: 'https://github.com/Mr-zhango/jenkins-demo-war.git']]])
+               checkout([$class: 'GitSCM', branches: [[name: '*/${branch}']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '5f62fc97-9b15-43d1-b03e-9faf75905bbb', url: 'https://github.com/Mr-zhango/jenkins-demo-war.git']]])
             }
         }
         stage('build project') {
