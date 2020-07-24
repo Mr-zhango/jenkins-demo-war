@@ -9,6 +9,6 @@ public class HelloControlelr {
 
     @GetMapping
     public ResponseEntity hello() {
-        return ResponseEntity.ok("Hello jenkins war Pipeline");
+        return ResponseEntity.ok("Hello jenkins war Pipeline dev分支");
     }
 }
